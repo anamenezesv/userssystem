@@ -59,7 +59,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ana-menezes/users-system
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/users-system
           tags: |
             type=sha,prefix=sha-
             type=raw,value=latest,enable={{is_default_branch}}
