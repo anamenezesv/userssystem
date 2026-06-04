@@ -64,7 +64,6 @@ jobs:
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/users-system
           tags: |
-            type=sha,prefix=sha-
             type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value={{date 'YYYY-MM-DD'}}-${{ github.run_number }}
 
